@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)https://cdpn.io/minwt/fullembedgrid/ZEYYoXv?animations=run&type=embed -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+
+
+
+  
+    <script src="./stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js.下載"></script>
+
+
+  <title>CodePen - jQuery myCart購物車模組v1.7</title>
+
+    <link rel="canonical" href="https://codepen.io/minwt/pen/ZEYYoXv">
+  
+  
+  <link rel="stylesheet" href="./bootstrap.min.css">
+  
+<style>
+h1{text-align:center;}
+.badge-notify{
+    background:red;
+    position:relative;
+    top: -20px;
+    right: 10px;
+  }
+  .my-cart-icon-affix {
+    position: fixed;
+    z-index: 999;
+  }
+</style>
+
+  
+  
+  
+</head>
+
+<body translate="no" data-new-gr-c-s-check-loaded="14.1137.0" data-gr-ext-installed="">
+  <div class="page-header">
+    <h1>jQuery 購物車模組
+      <div style="float: right; cursor: pointer;">
+        <span class="glyphicon glyphicon-shopping-cart my-cart-icon my-cart-icon-affix"><span class="badge badge-notify my-cart-badge">6</span></span>
+      </div>
+    </h1>
+  </div> 
+<div class="row">
+    <div class="col-sm-6 col-md-3 text-center">
+      <img src="./img_1.png" width="150px" height="150px">
+      <br>
+      產品1 - <strong>$10</strong>
+      <br>
+      <button class="btn btn-danger my-cart-btn" data-id="1" data-name="product 1" data-summary="summary 1" data-price="10" data-quantity="1" data-image="https://www.jqueryscript.net/demo/Simple-Shopping-Cart-Plugin-With-jQuery-Bootstrap-mycart/images/img_1.png">加入購物車</button>
+      <a href="https://cdpn.io/minwt/fullembedgrid/ZEYYoXv?animations=run&amp;type=embed#" class="btn btn-info">產品內容</a>
+    </div>
+
+    <div class="col-sm-6 col-md-3 text-center">
+      <img src="./img_2.png" width="150px" height="150px">
+      <br>
+      產品 2 - <strong>$20</strong>
+      <br>
+      <button class="btn btn-danger my-cart-btn" data-id="2" data-name="product 2" data-summary="summary 2" data-price="20" data-quantity="1" data-image="https://www.jqueryscript.net/demo/Simple-Shopping-Cart-Plugin-With-jQuery-Bootstrap-mycart/images/img_2.png">加入購物車</button>
+      <a href="https://cdpn.io/minwt/fullembedgrid/ZEYYoXv?animations=run&amp;type=embed#" class="btn btn-info">產品內容</a>
+    </div>
+
+    <div class="col-sm-6 col-md-3 text-center">
+      <img src="./img_3.png" width="150px" height="150px">
+      <br>
+      產品 3 - <strong>$30</strong>
+      <br>
+      <button class="btn btn-danger my-cart-btn" data-id="3" data-name="product 3" data-summary="summary 3" data-price="30" data-quantity="1" data-image="https://www.jqueryscript.net/demo/Simple-Shopping-Cart-Plugin-With-jQuery-Bootstrap-mycart/images/img_3.png">加入購物車</button>
+      <a href="https://cdpn.io/minwt/fullembedgrid/ZEYYoXv?animations=run&amp;type=embed#" class="btn btn-info">產品內容</a>
+    </div>
+
+    <div class="col-sm-6 col-md-3 text-center">
+      <img src="./img_4.png" width="150px" height="150px">
+      <br>
+      產品 4 - <strong>$40</strong>
+      <br>
+      <button class="btn btn-danger my-cart-btn" data-id="4" data-name="product 4" data-summary="summary 4" data-price="40" data-quantity="1" data-image="https://www.jqueryscript.net/demo/Simple-Shopping-Cart-Plugin-With-jQuery-Bootstrap-mycart/images/img_4.png">加入購物車</button>
+      <a href="https://cdpn.io/minwt/fullembedgrid/ZEYYoXv?animations=run&amp;type=embed#" class="btn btn-info">產品內容</a>
+    </div>
+</div>
+  <script src="./jquery-2.2.3.min.js.下載"></script>
+<script src="./bootstrap.min.js.下載"></script>
+<script src="./jquery.mycart.js.下載"></script>
+      <script id="rendered-js">
+$(function () {
+
+  var goToCartIcon = function ($addTocartBtn) {
+    var $cartIcon = $(".my-cart-icon");
+    var $image = $('<img width="30px" height="30px" src="' + $addTocartBtn.data("image") + '"/>').css({ "position": "fixed", "z-index": "999" });
+    $addTocartBtn.prepend($image);
+    var position = $cartIcon.position();
+    $image.animate({
+      top: position.top,
+      left: position.left },
+    500, "linear", function () {
+      $image.remove();
+    });
+  };
+
+  $('.my-cart-btn').myCart({
+    currencySymbol: '$',
+    classCartIcon: 'my-cart-icon',
+    classCartBadge: 'my-cart-badge',
+    classProductQuantity: 'my-product-quantity',
+    classProductRemove: 'my-product-remove',
+    classCheckoutCart: 'my-cart-checkout',
+    affixCartIcon: true,
+    showCheckoutModal: true,
+    numberOfDecimals: 2,
+    clickOnAddToCart: function ($addTocart) {
+      goToCartIcon($addTocart);
+    },
+    afterAddOnCart: function (products, totalPrice, totalQuantity) {
+      console.log("afterAddOnCart", products, totalPrice, totalQuantity);
+    },
+    clickOnCartIcon: function ($cartIcon, products, totalPrice, totalQuantity) {
+      console.log("cart icon clicked", $cartIcon, products, totalPrice, totalQuantity);
+    },
+    checkoutCart: function (products, totalPrice, totalQuantity) {
+      var checkoutString = "Total Price: " + totalPrice + "\nTotal Quantity: " + totalQuantity;
+      checkoutString += "\n\n id \t name \t summary \t price \t quantity \t image path";
+      $.each(products, function () {
+        checkoutString += "\n " + this.id + " \t " + this.name + " \t " + this.summary + " \t " + this.price + " \t " + this.quantity + " \t " + this.image;
+      });
+      alert(checkoutString);
+      console.log("checking out", products, totalPrice, totalQuantity);
+    },
+    getDiscountPrice: function (products, totalPrice, totalQuantity) {
+      console.log("calculating discount", products, totalPrice, totalQuantity);
+      return totalPrice * 0.5;
+    } });
+
+
+  $("#addNewProduct").click(function (event) {
+    var currentElementNo = $(".row").children().length + 1;
+    $(".row").append('<div class="col-md-3 text-center"><img src="images/img_empty.png" width="150px" height="150px"><br>product ' + currentElementNo + ' - <strong>$' + currentElementNo + '</strong><br><button class="btn btn-danger my-cart-btn" data-id="' + currentElementNo + '" data-name="product ' + currentElementNo + '" data-summary="summary ' + currentElementNo + '" data-price="' + currentElementNo + '" data-quantity="1" data-image="images/img_empty.png">Add to Cart</button><a href="#" class="btn btn-info">Details</a></div>');
+  });
+});
+//# sourceURL=pen.js
+    </script>
+
+  
+  <script src="./iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js.下載"></script>
+
+
+
+<div class="modal fade" id="my-cart-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button><h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon-shopping-cart"></span> My Cart</h4></div><div class="modal-body"><table class="table table-hover table-responsive" id="my-cart-table"></table></div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button><button type="button" class="btn btn-primary my-cart-checkout">Checkout</button></div></div></div></div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>

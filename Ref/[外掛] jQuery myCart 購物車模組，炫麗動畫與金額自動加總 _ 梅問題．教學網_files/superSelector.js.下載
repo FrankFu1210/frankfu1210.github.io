@@ -1,0 +1,244 @@
+if(window.location.search.indexOf('superselector=1')>=0){
+    _ezGetSeltrInit();
+    console.log('Nelson\'s Super Selector:\r\nEnabled!');
+}
+
+
+var $=$||window.jQuery;
+
+
+function _ezGetSeltrInit(){
+    if(window.jQuery==undefined){
+        var __ezgtmGtqs=document.createElement('script');
+        __ezgtmGtjq.defer=false;__ezgtmGtjq.async=false;
+        __ezgtmGtjq.setAttribute("src","https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js");
+        __ezgtmGtjq.onload=function(){
+    
+        };
+        document.getElementsByTagName('head')[0].prepend( __ezgtmGtjq);
+    }else if($==undefined && window.jQuery!=undefined){
+        $=window.jQuery;        
+    }    
+    
+    var highlightStyle = document.createElement('style');
+    highlightStyle.type = 'text/css';
+    highlightStyle.innerHTML = '.highlightBorder,.highlightBorder:hover { border:solid 2px #F00!important;border-radius:6px;cursor:pointer} ';
+    highlightStyle.innerHTML += '.selectedBorder { border:solid 3px #3EE!important;border-radius:6px;cursor:pointer}';
+    document.getElementsByTagName('head')[0].appendChild(highlightStyle);
+
+    var infoPanelStyle = document.createElement('style');
+    infoPanelStyle.type = 'text/css';
+    infoPanelStyle.innerHTML = '#selectorInfoPanel { display:block;position:fixed;bottom:40px;left:20px;width:600px;min-height:70px;color:#fff;background-color:#036073;border:solid 1px #8db3b3;z-index:99999;padding:5px;box-shadow:4px 4px 10px -4px rgba(0,0,0,0.95);border-radius:10px;}';
+    document.getElementsByTagName('head')[0].appendChild(infoPanelStyle);
+
+    var _ezInfoPanel=document.createElement('div');
+    _ezInfoPanel.setAttribute('id','selectorInfoPanel');
+    _ezInfoPanel.innerHTML='CSS 選擇器監控視窗：';
+    document.getElementsByTagName('body')[0].appendChild(_ezInfoPanel);
+
+    ezStartGetSelector();
+}
+
+function _ezGetCssSelector1(el){
+    console.clear();
+    var path=[];
+    console.log("classList -->");
+    console.log(el.classList);
+    var _ezSltStr='';
+
+    path = []; var _ezparent;
+    var _ezCurSlts='';
+    var bingo=false;
+    var uplevels=0;
+    console.log("--- Start -->");
+    while ((_ezparent = el.parentNode) && !bingo) {
+        //console.log(el);
+        
+
+        if(el.classList==undefined){continue;}
+
+        /* Step 1: if el has id attr */
+        if($(el).attr('id')!=undefined && $(el).attr('id')!=''){
+                var _tmpID=$(el).attr('id');
+                if($('#'+_tmpID).length=1){
+                    console.log("bingo! ----> #"+_tmpID)
+                    path.unshift('#'+_tmpID);
+                    bingo=true;break;
+                    return;
+                }
+        }
+        /* Step 2: if a/button/img tag name */
+        var _tmpTagname=$(el)[0].tagName.toLowerCase();
+        console.log(_tmpTagname);
+        /*        
+        
+        if(_tmpTagname=='a'){
+            var _eztmpslt1="a[href='" + $(el).attr('href') + "']";
+            
+            if($(_eztmpslt1).length==1){
+                
+                console.log("bingo! ----> " + _eztmpslt1 );
+                path.unshift(_eztmpslt1);
+                bingo=true;break;
+            }
+        }
+        */
+        
+
+
+        /* Step 3: if only one tag name */
+        
+        if($(_tmpTagname).length==1){
+            console.log("bingo! ----> " + _tmpTagname);
+            path.unshift(_tmpTagname);
+            bingo=true;break;
+            return;
+        }
+        
+        /* Step 4: if only one class name */
+        var siblings;
+        var _ezTagName = el.tagName.toLowerCase();
+        siblings = _ezparent.children;
+
+        var added=false;
+        var _ezTmpClassName='';  /* save minimal length class name*/
+        var _ezTmpClassCount=99999;
+
+        if(el.classList.length>0){
+            el.classList.forEach(function(elc){
+                if(elc=='highlightBorder' || elc=='selectedBorder' || bingo){return;}
+
+                if($("."+elc).length==1){
+                    console.log("bingo! ----> ."+elc)
+                    bingo=true;
+
+                    path.unshift("."+elc);
+
+                    return;
+                }else{
+                    if($("."+elc).length < _ezTmpClassCount){
+                        _ezTmpClassCoun=$("."+elc).length;
+                        _ezTmpClassName="."+elc;
+                    }
+
+                    added=true;
+                }
+            });
+            if(bingo){
+                break;
+            }
+            if(_ezTmpClassName!=''){
+                path.unshift(_ezTmpClassName);
+            }else{
+                if(siblings.length>0){
+                    path.unshift(_ezTagName+':nth-child(' + (parseInt([].indexOf.call(siblings, el))+1) + ')');
+                }else{
+                    path.unshift(_ezTagName);
+                }
+            }
+        }else{
+            if(siblings.length>0){
+                path.unshift(_ezTagName+':nth-child(' + (parseInt([].indexOf.call(siblings, el))+1) + ')');
+            }else{
+                path.unshift(_ezTagName);
+            }
+        }
+
+
+        el = _ezparent;
+        uplevels+=1;
+    };
+
+    console.log('------Unique CSS Selector-------');
+    console.log(_ezCurSlts);
+    console.log('------PATH-------');
+    console.log(path.join(' > '));
+    console.log('---->>>>');
+    console.log($(path.join(' > ')));
+    console.log('');console.log('');
+
+    return path.join(' > ');
+}
+
+
+
+function _ezGetCssSelector(el){
+  path = []; var parent;
+  while (parent = el.parentNode) {
+    var tag = el.tagName;var siblings;
+    path.unshift(
+      el.id ? `#${el.id}` : (
+        siblings = parent.children,
+        [].filter.call(siblings, sibling => sibling.tagName === tag).length === 1 ? tag :
+        `${tag}:nth-child(${1+[].indexOf.call(siblings, el)})`
+      )
+    );
+    el = parent;
+  };
+  return `${path.join(' > ')}`.toLowerCase();
+};
+
+function ezStartGetSelector(){
+    $(document).ready(function(){
+        $("*:not(#selectorInfoPanel)").off('click');
+        $("*:not(#selectorInfoPanel)").on('click',function(e){
+            if(e.target==this){
+                //var _ezSelectorStr=_ezGetCssSelector(this).toString().replace(/html > /,'');
+                var _ezSelectorStr=_ezGetCssSelector1(this);
+                console.log("------");
+                console.log("Unique CSS Selector-1:\r\n"+_ezSelectorStr);
+                /* _ezSelectorStr=getBestSelector(_ezSelectorStr);
+                console.log("Unique CSS Selector-2:\r\n"+_ezSelectorStr); */
+
+                var ret='你點選的CSS 選擇器：&nbsp;&nbsp;';
+                var ret = ret + '<button id="btnCopySelector">Copy</button>';
+                var ret = ret + '<span id="copied" style="color:#fff;display:none"> Copied! </span>';
+                var ret = ret + '<br/><label id="lblSelectorStr"  value="" style="" title="'+_ezSelectorStr+'">'+ _ezSelectorStr +'</label>';
+                var ret = ret + '<br/><input id="txtSelectorStr" type="text" value="'+ _ezSelectorStr +'" style="" title="'+_ezSelectorStr+'" />';
+                //ret+='<br/><button id="_ezViewSltrEle">檢視</button>';
+                //ret+='<button id="_ezValidateSltr">驗證</button>';
+                $("#selectorInfoPanel").html(ret);
+                event.preventDefault();
+
+                $("#btnCopySelector").on('click',function(){
+                    $("#txtSelectorStr").select();
+                    document.execCommand("copy");
+                    $("#txtSelectorStr").prop("selected", false);
+                    
+                    $("#copied").show();
+                    setTimeout(function(){
+                        $("#copied").hide();
+                    },3000)
+                })
+            }
+            
+        })
+    
+        $("*:not(#selectorInfoPanel)").on('mouseover',function(e){
+            if(e.target==this){
+                $(this).addClass('highlightBorder');
+            }
+            
+        })
+        $("*").on('mouseout',function(e){
+            if(e.target==this){
+                $(this).removeClass('highlightBorder');
+            }
+            
+        })
+    });
+}
+
+function getBestSelector(_ezStr){
+    var _arrSlts=_ezStr.replace(/ > /ig,'>').split('>');
+    var _arrNewSlts=[];
+    for(_i=_arrSlts.length-1;_i>0 ;_i--){
+        _arrNewSlts.push(_arrSlts[_i]);
+        if(_arrSlts[_i].toString().startsWith('#')){
+            break;
+        }
+    }
+
+    return _arrNewSlts.reverse().join(' > ');
+
+}

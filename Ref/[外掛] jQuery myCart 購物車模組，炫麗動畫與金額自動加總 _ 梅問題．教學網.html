@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://www.minwt.com/webdesign-dev/js/21947.html -->
+<html lang="zh-cmn-Hant-TW" class="wf-source-han-sans-traditional-n7-active wf-source-han-sans-traditional-n2-active wf-source-han-sans-traditional-n9-active wf-source-han-sans-traditional-n3-active wf-source-han-sans-traditional-n5-active wf-source-han-sans-traditional-n4-active wf-active"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 | 梅問題．教學網</title>
+
+<meta name="description" content="最近有不少朋友問梅干，Google表單能不能做這個或做那個，基本Google表單就是一個界面，幫各位把資料寫入Google試算表中，因此只要前端的表單能...">
+<link rel="canonical" href="https://www.minwt.com/webdesign-dev/js/21947.html">
+<meta property="og:locale" content="zh-cmn-Hant-TW">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總">
+<meta property="og:description" content="最近有不少朋友問梅干，Google表單能不能做這個或做那個，基本Google表單就是一個界面，幫各位把資料寫入Google試算表中，因此只要前端的表單能...">
+<meta property="og:url" content="https://www.minwt.com/webdesign-dev/js/21947.html">
+<meta property="og:site_name" content="梅問題．教學網">
+<meta property="og:image" content="//photo.minwt.com/img/Content/jQuery/jquery-mycart/jquery-mycart_00.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="最近有不少朋友問梅干，Google表單能不能做這個或做那個，基本Google表單就是一個界面，幫各位把資料寫入Google試算表中，因此只要前端的表單能...">
+<meta name="twitter:title" content="[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總">
+<meta name="twitter:site" content="@minwt">
+<meta name="twitter:image" content="//photo.minwt.com/img/Content/jQuery/jquery-mycart/jquery-mycart_00.jpg">
+<script type="text/javascript" async="" src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/analytics.js.下載"></script><script type="text/javascript" async="" src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/js"></script><script src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/f(7).txt"></script><script async="" src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/clarity.js.下載"></script><script type="text/javascript" async="" src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/analytics.js.下載"></script><script type="text/javascript" async="" src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/js(1)"></script><script src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/f(8).txt" id="google_shimpl"></script><script async="" src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/b7w65zujn2"></script><script async="" charset="utf-8" src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/plugin.min.js.下載"></script><script async="" src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/24611f67-44c1-4112-acc6-1f9df6a5de51.js.下載"></script><script async="" src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/matomo.js.下載"></script><script async="" src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/gtm.js.下載"></script><script src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/oci6zsa.js.下載" async=""></script><script type="application/ld+json">
+{
+		"@context": "http://schema.org",
+		"@type": "BlogPosting",
+		"mainEntityOfPage": {
+		"@type": "WebPage"
+	},
+		"name": "[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總",
+		"image": {
+		"@type": "ImageObject",
+		"url": "https://photo.minwt.com/img/Content/jQuery/jquery-mycart/jquery-mycart_00.jpg",
+		"width": 850,
+		"height": 595
+	},
+		"url": "https://www.minwt.com/webdesign-dev/js/21947.html",
+		"description": "最近有不少朋友問梅干，Google表單能不能做這個或做那個，基本Google表單就是一個界面，幫各位把資料寫入Google試算表中，因此只要前端的表單能...",
+		"author": "梅干",
+		"datePublished":"2019-12-05",
+		"headline":"[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總",
+		"dateModified":"2019-12-05",
+		"publisher": {
+		"@type":"Organization",
+		"name":"梅問題．教學網",
+		"logo": {
+		"@type": "ImageObject",
+		"url": "https://www.minwt.com/images/Icon@2.png"
+	}
+	}
+}
+</script>
+<script type="application/ld+json">
+    {
+     "@context": "https://schema.org/",
+     "@type": "WebPage",
+     "name": "[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總",
+     "speakable":
+     {
+      "@type": "SpeakableSpecification",
+      "cssSelector": [
+        ".entry-title",
+        ".single-content"
+        ]
+      },
+     "url": "https://www.minwt.com/webdesign-dev/js/21947.html"
+     }
+    </script>
+
+<meta property="dable:item_id" content="21947"> 
+<meta property="dable:author" content="梅干">
+<meta property="article:section" content="[js webdesign-dev]">
+<meta property="article:published_time" content="2019-12-05">
+
+<meta name="y_key" content="89aefa8bd9085c03">
+<meta name="alexaVerifyID" content="KPHW2hY9x17tP0JahB3Ekecd0Ik">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="shortcut icon" href="https://www.minwt.com/images/favicon.png">
+<link rel="icon" type="image/png" href="https://www.minwt.com/images/favicon.png">
+<link rel="apple-touch-icon" href="https://www.minwt.com/images/Icon.png">
+<link rel="apple-touch-icon" sizes="72×72" href="https://www.minwt.com/images/Icon-72.png">
+<link rel="apple-touch-icon" sizes="114×114" href="https://www.minwt.com/images/Icon@2.png">
+<link href="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/bootstrap-grid.min.css" rel="stylesheet" type="text/css">
+<link href="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/font-awesome.min.min.css" rel="stylesheet" type="text/css">
+<link href="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/jquery.highlight.min.css" rel="stylesheet" type="text/css">
+<link href="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/style.min.css" rel="stylesheet" type="text/css">
+
+<script>
+  (function(d) {
+    var config = {
+      kitId: 'oci6zsa',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+<script async="" src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/f(9).txt" crossorigin="anonymous" data-checked-head="true"></script>
+
+ 
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5TBWTNX');</script>
+  
+  
+  
+  <script async="" src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/js(2)"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'UA-3183740-27');
+  </script>
+
+<script>
+  var _paq = window._paq = window._paq || [];
+   
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//matomo.mwt.tw/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '2']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+
+
+<script type="text/javascript">
+  (function(window, document, dataLayerName, id) {
+  window[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new Date).getTime(),event:"stg.start"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');
+  function stgCreateCookie(a,b,c){var d="";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d="; expires="+e.toUTCString();f="; SameSite=Strict"}document.cookie=a+"="+b+d+f+"; path=/"}
+  var isStgDebug=(window.location.href.match("stg_debug")||document.cookie.match("stg_debug"))&&!window.location.href.match("stg_disable_debug");stgCreateCookie("stg_debug",isStgDebug?1:"",isStgDebug?14:-1);
+  var qP=[];dataLayerName!=="dataLayer"&&qP.push("data_layer_name="+dataLayerName),isStgDebug&&qP.push("stg_debug");var qPString=qP.length>0?("?"+qP.join("&")):"";
+  tags.async=!0,tags.src="https://minwt.containers.piwik.pro/"+id+".js"+qPString,scripts.parentNode.insertBefore(tags,scripts);
+  !function(a,n,i){a[n]=a[n]||{};for(var c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var a=[].slice.call(arguments,0);"string"==typeof a[0]&&window[dataLayerName].push({event:n+"."+i+":"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,"ppms",["tm","cm"]);
+  })(window, document, 'dataLayer', '24611f67-44c1-4112-acc6-1f9df6a5de51');
+</script>
+
+<link rel="stylesheet" type="text/css" href="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/prettify.css"><style>.tk-source-han-sans-traditional{font-family:"source-han-sans-traditional",sans-serif;}</style><meta http-equiv="origin-trial" content="As0hBNJ8h++fNYlkq8cTye2qDLyom8NddByiVytXGGD0YVE+2CEuTCpqXMDxdhOMILKoaiaYifwEvCRlJ/9GcQ8AAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="AgRYsXo24ypxC89CJanC+JgEmraCCBebKl8ZmG7Tj5oJNx0cmH0NtNRZs3NB5ubhpbX/bIt7l2zJOSyO64NGmwMAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A/ERL66fN363FkXxgDc6F1+ucRUkAhjEca9W3la6xaLnD2Y1lABsqmdaJmPNaUKPKVBRpyMKEhXYl7rSvrQw+AkAAACNeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A6OdGH3fVf4eKRDbXb4thXA4InNqDJDRhZ8U533U/roYjp4Yau0T3YSuc63vmAs/8ga1cD0E3A7LEq6AXk1uXgsAAACTeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="As0hBNJ8h++fNYlkq8cTye2qDLyom8NddByiVytXGGD0YVE+2CEuTCpqXMDxdhOMILKoaiaYifwEvCRlJ/9GcQ8AAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="AgRYsXo24ypxC89CJanC+JgEmraCCBebKl8ZmG7Tj5oJNx0cmH0NtNRZs3NB5ubhpbX/bIt7l2zJOSyO64NGmwMAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A/ERL66fN363FkXxgDc6F1+ucRUkAhjEca9W3la6xaLnD2Y1lABsqmdaJmPNaUKPKVBRpyMKEhXYl7rSvrQw+AkAAACNeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A6OdGH3fVf4eKRDbXb4thXA4InNqDJDRhZ8U533U/roYjp4Yau0T3YSuc63vmAs/8ga1cD0E3A7LEq6AXk1uXgsAAACTeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="As0hBNJ8h++fNYlkq8cTye2qDLyom8NddByiVytXGGD0YVE+2CEuTCpqXMDxdhOMILKoaiaYifwEvCRlJ/9GcQ8AAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="AgRYsXo24ypxC89CJanC+JgEmraCCBebKl8ZmG7Tj5oJNx0cmH0NtNRZs3NB5ubhpbX/bIt7l2zJOSyO64NGmwMAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A/ERL66fN363FkXxgDc6F1+ucRUkAhjEca9W3la6xaLnD2Y1lABsqmdaJmPNaUKPKVBRpyMKEhXYl7rSvrQw+AkAAACNeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A6OdGH3fVf4eKRDbXb4thXA4InNqDJDRhZ8U533U/roYjp4Yau0T3YSuc63vmAs/8ga1cD0E3A7LEq6AXk1uXgsAAACTeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="As0hBNJ8h++fNYlkq8cTye2qDLyom8NddByiVytXGGD0YVE+2CEuTCpqXMDxdhOMILKoaiaYifwEvCRlJ/9GcQ8AAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="AgRYsXo24ypxC89CJanC+JgEmraCCBebKl8ZmG7Tj5oJNx0cmH0NtNRZs3NB5ubhpbX/bIt7l2zJOSyO64NGmwMAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A/ERL66fN363FkXxgDc6F1+ucRUkAhjEca9W3la6xaLnD2Y1lABsqmdaJmPNaUKPKVBRpyMKEhXYl7rSvrQw+AkAAACNeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A6OdGH3fVf4eKRDbXb4thXA4InNqDJDRhZ8U533U/roYjp4Yau0T3YSuc63vmAs/8ga1cD0E3A7LEq6AXk1uXgsAAACTeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><script>gtag('config', 'G-3EYH4NZ712');
+  gtag('event', 'page_view', {"send_to":"G-3EYH4NZ712","dimension1":9885,"dimension2":"[js webdesign-dev]"})</script></head>
+<body data-new-gr-c-s-check-loaded="14.1137.0" data-gr-ext-installed="" aria-hidden="false" style="padding: 0px 0px 154px;" data-new-gr-c-s-loaded="14.1137.0">
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5TBWTNX"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<aside id="sidebar-wrapper" class="custom-scrollbar offcanvas-sidebar ps ps--active-x ps--active-y">
+    <a class="off-canvas-close"> <span class="close"></span></a>
+    <div class="sidebar-inner">
+    	
+       <ul class="main-menu d-inline font-primary">
+            <li><a href="https://www.minwt.com/hotpost.html">熱門文章 </a> </li>
+			<li><a href="https://www.minwt.com/categories/webdesign-dev/">網設</a></li>
+			<li><a href="https://www.minwt.com/categories/mac/">Mac</a></li>
+			<li><a href="https://www.minwt.com/categories/adobe/">Adobe</a></li>
+			<li><a href="https://www.minwt.com/categories/productphoto/">攝影</a></li>
+			<li><a href="https://www.minwt.com/categories/pc/">軟體</a></li>
+			<li><a href="https://www.minwt.com/categories/mobile/">APP</a></li>
+			<li><a href="https://www.minwt.com/categories/life/">生活</a></li>
+			<li><a href="https://www.minwt.com/categories/website/">架站</a></li>
+			<li><a href="https://www.minwt.com/categories/free/">免費資源</a></li>
+            <li><a href="https://www.minwt.com/sitereview.html">全站分類</a></li>
+						<li><a href="https://www.minwt.com/contact/">合作提案</a></li>
+				</ul>
+    </div>
+</aside>
+<header class="main-header bg-white">
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-lg-5 col-md-4 col-2 text-left">
+				<div class="off-canvas-toggle-cover d-lg-inline-block mr-30">
+            <div class="off-canvas-toggle hidden d-inline-block" id="off-canvas-toggle">
+                <span></span>
+            </div>
+        </div>
+				<ul class="main-menu d-none d-lg-inline font-primary">
+						<li><a href="https://www.minwt.com/hotpost.html">熱門文章 </a> </li>
+						<li><a href="https://www.minwt.com/sitereview.html">全站導覽</a></li>
+						<li><a href="https://www.minwt.com/contact/">合作提案</a></li>
+				</ul>
+			</div>
+			<div class="col-lg-2 col-md-4 col-8">
+					<div class="header-logo text-center">
+						 <a href="https://www.minwt.com/" class="brand">梅問題．教學網</a>
+					</div>
+			</div>
+			<div class="col-lg-5 col-md-4 col-2 text-right">
+				<ul class="header-social-network d-none d-md-inline-block list-inline">
+						<li class="list-inline-item"><a class="social-icon fb text-xs-center" target="_blank" href="https://www.facebook.com/minwtfans"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+						
+						<li class="list-inline-item"><a class="social-icon pt text-xs-center" target="_blank" href="https://www.instagram.com/minwt/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+				</ul>
+				<a class="search-icon" href="https://www.minwt.com/webdesign-dev/js/21947.html#"><i class="fa fa-search mr-5" aria-hidden="true"></i></a>
+			</div>
+		</div>
+	</div>
+</header>
+<nav id="nav">
+	<div class="container">
+	 	<ul id="catnav">
+		 	
+<li><a href="https://www.minwt.com/categories/mac/">Mac</a></li>
+<li><a href="https://www.minwt.com/categories/3c%E5%A8%9B%E6%A8%82/">開箱</a></li>
+<li><a href="https://www.minwt.com/tags/%E5%8E%BB%E8%83%8C/">去背</a></li>
+<li><a href="https://www.minwt.com/categories/cloud-app/">雲端工具</a></li>
+<li><a href="https://www.minwt.com/categories/free/">免費資源</a></li>
+<li><a href="https://www.minwt.com/tags/youtube%E4%B8%8B%E8%BC%89/">Youtube下載</a></li>
+<li><a href="https://www.minwt.com/tags/%E5%85%8D%E8%B2%BB%E5%AD%97%E5%9E%8B/">字型下載</a></li>
+<li><a href="https://www.minwt.com/tags/%E5%85%8D%E8%B2%BB%E7%A9%BA%E9%96%93/">零元架站</a></li>
+<li><a href="https://www.minwt.com/categories/wordpress/">WordPress</a></li>
+<li><a href="https://www.minwt.com/tags/ai/">AI</a></li>
+
+
+
+		</ul>
+	</div>
+</nav><div class="main-search-form">
+	<div class="pt-50 pb-50">
+			<div class="row mb-20">
+				<div class="col-12 align-self-center main-search-form-cover m-auto">
+					<a class="search-icon-close"> <span class="close"></span></a>
+					<p><span class="search-text-bg font-secondary">搜尋</span></p>
+						<div class="search-bar">
+							<form id="searchform1" action="https://www.minwt.com/doc-search">
+								<input type="hidden" name="cx" value="007206723842388607855:aj6q-jcdhos">
+								<input type="hidden" name="cof" value="FORID:11">
+								<input type="hidden" name="ie" value="UTF-8">
+								<input type="text" name="q" size="31" value="" class="csetext">
+								<button type="submit" class="search_submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+							</form>
+							<div class="search-suggested mt-80">
+							<h5 class="suggested font-heading mb-20"> <strong>熱門關鍵字:</strong></h5><ul class="list-inline d-inline-block">
+	<li class="list-inline-item"><a href="https://www.minwt.com/tags/%E5%85%8D%E8%B2%BB%E4%B8%BB%E6%A9%9F/">免費主機空間</a>
+  </li><li class="list-inline-item"><a href="https://www.minwt.com/tags/%E7%B7%9A%E4%B8%8A%E6%9B%B8%E6%B3%95%E5%AD%97%E7%94%A2%E7%94%9F%E5%99%A8/">書法字產生器</a></li>
+  <li class="list-inline-item"><a href="https://www.minwt.com/life/13748.html">免費3D軟體大集合</a></li>
+  <li class="list-inline-item"><a href="https://www.minwt.com/product-photography.html">商品攝影教學</a></li>
+  <li class="list-inline-item"><a href="https://www.minwt.com/tags/bootstrap%E6%95%99%E5%AD%B8/">bootstrap教學</a></li>
+  <li class="list-inline-item"><a href="https://www.minwt.com/tags/wordpress%E6%9E%B6%E8%A8%AD/">wordpress架設</a></li>
+</ul>
+
+
+							</div>
+						</div>
+				</div>
+			</div>
+	</div>
+</div>
+
+
+<div class="dark-mark"></div>
+<main class="main-content" style="height: auto !important;">
+	<div class="container single-content bg-white" style="height: auto !important;">
+<div class="row pb-50 mt-50 content justify-content-center" id="21947" style="height: auto !important;">
+	<article class="single-post col-sm-10 p-30" style="height: auto !important;">
+		<div class="single-more-articles border">
+      <div class="widget-header-4 position-relative mb-30">
+          <h3 class="mt-5 mb-30 text-uppercase">最新文章</h3>
+          <span class="close"></span>
+      </div>
+      
+
+      
+	    
+	    <article class="row align-items-center mb-30">
+          <figure class="col-4 mb-0">
+              <a href="https://www.minwt.com/pc/24142.html">
+				<img src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/easeus-data-re_00xs.jpg" alt="EaseUS Data Recovery Wizard輕鬆搶救回來你相機已刪除的照片" width="115" height="81">
+			</a>
+          </figure>
+          <div class="col-8 pl-0">
+              <h6 class="post-title">
+                  <a href="https://www.minwt.com/pc/24142.html"><h2>EaseUS Data Recovery Wizard輕鬆搶救回來你相機已刪除的照片</h2></a>
+              </h6>
+              <div class="post-meta mb-10 font-primary text-uppercase">
+                  <span class="date">2023/11/09</span>
+              </div>
+          </div>
+      </article>
+      
+	    <article class="row align-items-center mb-30">
+          <figure class="col-4 mb-0">
+              <a href="https://www.minwt.com/pc/24139.html">
+				<img src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/easeus_00xs.jpg" alt="EaseUS Partition 讓硬碟分割變得容易，支援模擬和執行分割、調整大小、合併等功能" width="115" height="81">
+			</a>
+          </figure>
+          <div class="col-8 pl-0">
+              <h6 class="post-title">
+                  <a href="https://www.minwt.com/pc/24139.html"><h2>EaseUS Partition 讓硬碟分割變得容易，支援模擬和執行分割、調整大小、合併等功能</h2></a>
+              </h6>
+              <div class="post-meta mb-10 font-primary text-uppercase">
+                  <span class="date">2023/11/09</span>
+              </div>
+          </div>
+      </article>
+      
+  </div>
+		<div class="bread">
+			
+<ol itemscope="" itemtype="http://schema.org/BreadcrumbList">
+  <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+    <a itemprop="item" href="https://www.minwt.com/">
+    <span itemprop="name">首頁</span></a>
+    <meta itemprop="position" content="1">
+  </li>
+  <li class="separator">»</li>
+								<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+							    <a itemprop="item" href="https://www.minwt.com/categories/webdesign-dev">
+							    <span itemprop="name">網頁開發</span></a>
+							    <meta itemprop="position" content="2">
+							  </li>
+								<li class="separator">»</li>
+								
+								<li>
+							    <span style="color:#32b3bf;">js</span>
+							  </li>
+									
+								<li>
+							    <span style="color:#32b3bf;">[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總</span>
+							  </li>
+
+									
+</ol>
+		</div>
+		<h1 class="entry-title pb-20">[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總</h1>
+		<span class="updated">2019/12/05</span>
+		<div class="g-336-280" id="gad1">
+			<script async="" src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/f(9).txt" crossorigin="anonymous" data-checked-head="true"></script>
+			
+			<ins class="adsbygoogle" style="display: block; height: 280px;" data-ad-client="ca-pub-5358947323787843" data-ad-slot="5472632948" data-ad-format="auto" data-adsbygoogle-status="done" data-ad-status="filled"><div id="aswift_1_host" style="border: none; height: 280px; width: 873px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: visible;" tabindex="0" title="Advertisement" aria-label="Advertisement"><iframe id="aswift_1" name="aswift_1" browsingtopics="true" style="left:0;position:absolute;top:0;border:0;width:873px;height:280px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="873" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting" src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/ads.html" data-google-container-id="a!2" data-load-complete="true" data-google-query-id="COHf37zuvYIDFbvKFgUd8-sLYA"></iframe></div></ins>
+			<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		</div>
+			<div class="single-content" itemprop="articleBody" style="height: auto !important;"><p></p><div class="alumb"><img width="850" height="595" alt="梅問題－[外掛] jQuery myCart 購物車模組，免寫Code立即套用" src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/jquery-mycart_00.jpg"></div>
+　　最近有不少朋友問梅干，Google表單能不能做這個或做那個，基本Google表單就是一個界面，幫各位把資料寫入Google試算表中，因此只要前端的表單能呈現的出來，剩下的就是把值寫回去Google的試算表中，所以可以把Google試算表看成是一個資料庫的概念。<p></p>
+					<div class="g-336-280 mt-50 mb-50" id="gad2">
+						<script async="" src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/f(9).txt" crossorigin="anonymous" data-checked-head="true"></script>
+						
+						<ins class="adsbygoogle" style="display: block; height: 280px;" data-ad-client="ca-pub-5358947323787843" data-ad-slot="9902832541" data-ad-format="auto" data-adsbygoogle-status="done" data-ad-status="filled"><div id="aswift_2_host" style="border: none; height: 280px; width: 873px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: visible;" tabindex="0" title="Advertisement" aria-label="Advertisement"><iframe id="aswift_2" name="aswift_2" browsingtopics="true" style="left:0;position:absolute;top:0;border:0;width:873px;height:280px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="873" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting" src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/ads(1).html" data-google-container-id="a!3" data-load-complete="true" data-google-query-id="CPDnrLzuvYIDFUkplgodKU8FoQ"></iframe></div></ins>
+						<script>
+								(adsbygoogle = window.adsbygoogle || []).push({});
+						</script>
+					</div>
+
+<p>  而對於單一商品，各位應該都沒啥問題，當遇到多產品時，就比較麻煩，最主要的原因就在於，當加入購物車的產品數量與金額的加總，或是刪除的商品自動扣除，而這部分是需要花時間與功力進行處理，但網路上已有不少熱心的網友，用jQuery寫了相關的套件，梅干在試用後，覺得jQuery myCart最簡單，也最好用，因此有需的朋友，現在也一塊來看看囉！
+</p><hr> <span class="codetitle">jQuery.myCart</span>
+<div class="box"><b>網站名稱：</b>jQueryScript.net<br>
+<b>網站連結：</b><a href="https://www.jqueryscript.net/other/Simple-Shopping-Cart-Plugin-With-jQuery-Bootstrap-mycart.html">www.jqueryscript.net</a></div>
+<hr> <font size="3"><b>Step1</b></font><br>
+首先，先將Boostrap與jQuery載入後，再把<font color="#FF0066"><b>jquery.mycart.js</b></font>載入。
+<div class="highlight undefined"><ul class="tabs"><li class="code active">code</li><li class="source">source</li></ul><pre class="code" style="display: block;"><ol><li class="even">&lt;link href="bootstrap.min.css" rel="stylesheet" /&gt;
+</li><li>&lt;script src="jquery.min.js"&gt;&lt;/script&gt;
+</li><li class="even">&lt;script src="bootstrap.min.js"&gt;&lt;/script&gt;
+</li><li>&lt;script src="jquery.mycart.js"&gt;&lt;/script&gt;
+</li></ol></pre><pre class="source" style="display: none;">&lt;link href="bootstrap.min.css" rel="stylesheet" /&gt;
+&lt;script src="jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="bootstrap.min.js"&gt;&lt;/script&gt;
+&lt;script src="jquery.mycart.js"&gt;&lt;/script&gt;
+</pre></div>
+<hr> <font size="3"><b>Step2</b></font><br>
+加入購物車圖示與按鈕。
+<div class="highlight undefined"><ul class="tabs"><li class="code active">code</li><li class="source">source</li></ul><pre class="code" style="display: block;"><ol><li class="even">&lt;span <span class="kwd">class</span>="glyphicon glyphicon-shopping-cart my-cart-icon"&gt;
+</li><li>&lt;span <span class="kwd">class</span>="badge badge-notify my-cart-badge"&gt;&lt;/span&gt;&lt;/span&gt;
+</li></ol></pre><pre class="source" style="display: none;">&lt;span class="glyphicon glyphicon-shopping-cart my-cart-icon"&gt;
+&lt;span class="badge badge-notify my-cart-badge"&gt;&lt;/span&gt;&lt;/span&gt;</pre></div>
+<hr> <font size="3"><b>Step3</b></font><br>
+建立產品區塊，而每一個產品區塊，都用一個div包起來，並在裡面放入圖片、標題與金額，而要把這產品加入購物車，則是由下方的加入購物鈕所控制的，因此在「加到購物車」按鈕，裡會有相關屬性的設定值分別為：
+<div class="box">data-id: 產品編號<br>
+data-name: 產品名稱<br>
+data-summary: 產品摘要<br>
+data-price: 產品價格<br>
+data-quantity: 產品數量<br>
+data-image: 產品圖片</div>
+<div class="highlight undefined"><ul class="tabs"><li class="code active">code</li><li class="source">source</li></ul><pre class="code" style="display: block;"><ol><li class="even">&lt;div <span class="kwd">class</span>="col-md-3 text-center"&gt;
+</li><li>&lt;img height="150px" src="圖片.png" width="150px" /&gt;&lt;br /&gt;
+</li><li class="even">產品名稱ABC &lt;strong&gt;產品金額$NT100&lt;/strong&gt;&lt;br /&gt;
+</li><li>&lt;button <span class="kwd">class</span>="btn btn-danger my-cart-btn" data-id="1" data-image="圖片.png" data-name="product 1" data-price="10" data-quantity="1" data-summary="summary 1"&gt;加入購物車&lt;/button&gt;
+</li><li class="even">&lt;/div&gt;
+</li><li>&nbsp;
+</li></ol></pre><pre class="source" style="display: none;">&lt;div class="col-md-3 text-center"&gt;
+&lt;img height="150px" src="圖片.png" width="150px" /&gt;&lt;br /&gt;
+產品名稱ABC &lt;strong&gt;產品金額$NT100&lt;/strong&gt;&lt;br /&gt;
+&lt;button class="btn btn-danger my-cart-btn" data-id="1" data-image="圖片.png" data-name="product 1" data-price="10" data-quantity="1" data-summary="summary 1"&gt;加入購物車&lt;/button&gt;
+&lt;/div&gt;
+&nbsp;
+</pre></div>
+<hr> <font size="3"><b>Step4</b></font><br>
+最後再加入下方的啟動碼，而下方的程式碼，最主要就是用來，當加入購物車的動畫，與購物車內的產品加總與刪除。
+<div class="highlight undefined"><ul class="tabs"><li class="code active">code</li><li class="source">source</li></ul><pre class="code" style="display: block;"><ol><li class="even"><span class="fnc">$</span>(<span class="kwd"><span class="kwd">function</span></span> () <span class="kwd">{</span>
+</li><li>  <span class="kwd">var</span> goToCartIcon = <span class="kwd"><span class="kwd">function</span></span>($addTocartBtn)<span class="kwd">{</span>
+</li><li class="even">    <span class="kwd">var</span> $cartIcon = <span class="fnc">$</span>(".my-cart-icon");
+</li><li>    <span class="kwd">var</span> $image = <span class="fnc">$</span>(<span class="str">'&lt;img width="850" height="595" image="" src="'</span> + $addTocartBtn.<span class="fnc">data</span>("&gt;').<span class="fnc">css</span>(<span class="kwd">{</span>"position": "fixed", "z-index": "999"<span class="kwd">}</span>);
+</li><li class="even">    $addTocartBtn.<span class="fnc">prepend</span>($image);
+</li><li>    <span class="kwd">var</span> position = $cartIcon.<span class="fnc">position</span>();
+</li><li class="even">    $image.<span class="fnc">animate</span>(<span class="kwd">{</span>
+</li><li>      top: position.top,
+</li><li class="even">      left: position.left
+</li><li>    <span class="kwd">}</span>, 500 , "linear", <span class="kwd"><span class="kwd">function</span></span>() <span class="kwd">{</span>
+</li><li class="even">      $image.<span class="fnc">remove</span>();
+</li><li>    <span class="kwd">}</span>);
+</li><li class="even">  <span class="kwd">}</span>&lt;p&gt;&lt;/p&gt;
+</li><li>
+</li><li class="even">&lt;p&gt;<span class="fnc">$</span>(<span class="str">'.my-cart-btn'</span>).<span class="fnc">myCart</span>(<span class="kwd">{</span>
+</li><li>    classCartIcon: <span class="str">'my-cart-icon'</span>,
+</li><li class="even">    classCartBadge: <span class="str">'my-cart-badge'</span>,
+</li><li>    affixCartIcon: <span class="kwd">true</span>,
+</li><li class="even">    checkoutCart: <span class="kwd"><span class="kwd">function</span></span>(products) <span class="kwd">{</span>
+</li><li>      $.<span class="fnc">each</span>(products, <span class="kwd"><span class="kwd">function</span></span>()<span class="kwd">{</span>
+</li><li class="even">        console.<span class="fnc">log</span>(<span class="kwd">this</span>);
+</li><li>      <span class="kwd">}</span>);
+</li><li class="even">    <span class="kwd">}</span>,
+</li><li>    clickOnAddToCart: <span class="kwd"><span class="kwd">function</span></span>($addTocart)<span class="kwd">{</span>
+</li><li class="even">      <span class="fnc">goToCartIcon</span>($addTocart);
+</li><li>    <span class="kwd">}</span>
+</li><li class="even">  <span class="kwd">}</span>);
+</li><li><span class="kwd">}</span>);&lt;/p&gt;
+</li></ol></pre><pre class="source" style="display: none;">$(function () {
+  var goToCartIcon = function($addTocartBtn){
+    var $cartIcon = $(".my-cart-icon");
+    var $image = $('&lt;img width="850" height="595" image="" src="' + $addTocartBtn.data("&gt;').css({"position": "fixed", "z-index": "999"});
+    $addTocartBtn.prepend($image);
+    var position = $cartIcon.position();
+    $image.animate({
+      top: position.top,
+      left: position.left
+    }, 500 , "linear", function() {
+      $image.remove();
+    });
+  }&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;$('.my-cart-btn').myCart({
+    classCartIcon: 'my-cart-icon',
+    classCartBadge: 'my-cart-badge',
+    affixCartIcon: true,
+    checkoutCart: function(products) {
+      $.each(products, function(){
+        console.log(this);
+      });
+    },
+    clickOnAddToCart: function($addTocart){
+      goToCartIcon($addTocart);
+    }
+  });
+});&lt;/p&gt;</pre></div>
+<hr> <font size="3"><b>Step5</b></font><br>
+當一切都建立好後，就會看到以下的畫面。<br>
+<img width="850" height="595" alt="梅問題-[外掛] jQuery myCart 購物車模組，免寫Code立即套用" src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/jquery-mycart_01.jpg">
+<hr> <font size="3"><b>Step6</b></font><br>
+當按加入購物車時，除了會有動畫外，右上角的購物車也會顯示，目前已放入購物車的產品數量。<br>
+<img width="850" height="595" alt="梅問題-[外掛] jQuery myCart 購物車模組，免寫Code立即套用" src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/jquery-mycart_02.jpg">
+<hr> <font size="3"><b>Step7</b></font><br>
+當點了購物車圖示，就會顯示所有的購物清單的數量與金額，到這邊剩下的部分，就是把這購物清單，寫回到Google表單，而透過這隻購物車模組，不用寫任何的程式碼，就能快速的打造出，自己專屬的購物車系統，至於要怎麼購物車裡的清單塞回到Google表單，有興趣的朋友，也歡迎報名梅干最近所開的線上課程「<a href="https://course.minwt.com/gformecpay/index.php" target="_blank">Google表單串接金流</a>」。<br>
+<img width="850" height="595" alt="梅問題-[外掛] jQuery myCart 購物車模組，免寫Code立即套用" src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/jquery-mycart_03.jpg">
+<hr>
+#範例預覽<br>
+<iframe height="424" style="width: 100%;" scrolling="no" title="jQuery myCart購物車模組v1.7" src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/ZEYYoXv(1).html" frameborder="no" allowtransparency="true" allowfullscreen="true"><br />
+  See the Pen <a href='https://codepen.io/minwt/pen/ZEYYoXv'>jQuery myCart購物車模組v1.7</a> by minwt<br />
+  (<a href='https://codepen.io/minwt'>@minwt</a>) on <a href='https://codepen.io'>CodePen</a>.<br />
+</iframe><p></p>
+					<br>
+					<div class="g-336-280" id="gad3">
+						<script async="" src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/f(9).txt" crossorigin="anonymous" data-checked-head="true"></script>
+						
+						<ins class="adsbygoogle" style="display: block; height: 280px;" data-ad-client="ca-pub-5358947323787843" data-ad-slot="9878382547" data-ad-format="auto" data-adsbygoogle-status="done" data-ad-status="filled"><div id="aswift_3_host" style="border: none; height: 280px; width: 873px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: visible;" tabindex="0" title="Advertisement" aria-label="Advertisement"><iframe id="aswift_3" name="aswift_3" browsingtopics="true" style="left:0;position:absolute;top:0;border:0;width:873px;height:280px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="873" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting" src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/ads(2).html" data-google-container-id="a!4" data-google-query-id="CKqBm7juvYIDFXLVFgUdAi4LCQ" data-load-complete="true"></iframe></div></ins>
+						<script>
+								(adsbygoogle = window.adsbygoogle || []).push({});
+						</script>
+					</div>
+			</div>
+			<div class="box">
+				<div class="postinfo">
+					<span class="ps">
+					※如有發現掉圖或檔案無法下載，請由回應區留言告知，將會盡速處理！<br>
+					※本站採用<a href="https://creativecommons.org/licenses/by-nc-sa/3.0/tw/" target="_blank">CC授權</a>請勿轉貼本站文章，謝謝。 </span>
+					<div id="email-subscription"><br>
+						<iframe src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/newsletter-signup.html" frameborder="0" width="100%;"></iframe>
+					</div>	
+				</div>
+			</div>
+			<div class="box">
+				<div class="postinfo">
+					<i class="fa fa-tag" aria-hidden="true"></i>
+					
+						
+							<a href="https://www.minwt.com/tags/jquery">jQuery</a>,
+						
+							<a href="https://www.minwt.com/tags/jquery%E5%A4%96%E6%8E%9B">jquery外掛</a>,
+						
+							<a href="https://www.minwt.com/tags/%E8%B3%BC%E7%89%A9%E8%BB%8A">購物車</a>,
+						
+							<a href="https://www.minwt.com/tags/%E8%B3%BC%E7%89%A9%E8%BB%8A%E6%A8%A1%E7%B5%84">購物車模組</a>,
+						
+					
+				</div>
+			</div>
+		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		<section class="aside">
+
+		</section>
+
+		<section id="dablewidget_OoRL6Mly" data-widget_id="OoRL6Mly" class="mt-30" style="height: auto; overflow: visible;"><iframe width="100%" height="313" title="其他人正在看" frameborder="0" scrolling="no" name="dableframe-0.691920057296944" style="border: 0px;" src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/70118924.html" data-ready="1"></iframe></section>
+		<section class="sing-post-list mt-30">
+			<div id="dablewidget_37J0ZgXN" data-widget_id="37J0ZgXN" style="height: auto; overflow: visible;"><iframe width="100%" height="858" title="你的專屬推薦" frameborder="0" scrolling="no" name="dableframe-0.9062562073154756" style="border: 0px;" src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/70118924(1).html" data-ready="1"></iframe></div>
+		</section>
+	</article>
+	
+</div><div class="google-auto-placed" style="width: 100%; height: auto; clear: both; text-align: center;"><ins data-ad-format="auto" class="adsbygoogle adsbygoogle-noablate" data-ad-client="ca-pub-5358947323787843" data-adsbygoogle-status="done" style="display: block; margin: 10px auto; background-color: transparent; height: 0px;" data-ad-status="unfilled"><div id="aswift_4_host" style="border: none; height: 0px; width: 1090px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: hidden; opacity: 0;" tabindex="0" title="Advertisement" aria-label="Advertisement"><iframe id="aswift_4" name="aswift_4" browsingtopics="true" style="left: 0px; position: absolute; top: 0px; border: 0px; width: 1090px; height: 0px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="1090" height="0" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting" src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/ads(3).html" data-google-container-id="a!5" data-google-query-id="CPu-vLjuvYIDFf_MFgUd4VEN6w" data-load-complete="true"></iframe></div></ins></div>
+<div class="google-auto-placed" style="width: 100%; height: auto; clear: both; text-align: center;"><ins data-ad-format="auto" class="adsbygoogle adsbygoogle-noablate" data-ad-client="ca-pub-5358947323787843" data-adsbygoogle-status="done" style="display: block; margin: 40px auto 10px; background-color: transparent; height: 0px;" data-ad-status="unfilled"><div id="aswift_5_host" style="border: none; height: 0px; width: 1090px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: hidden; opacity: 0;" tabindex="0" title="Advertisement" aria-label="Advertisement"><iframe id="aswift_5" name="aswift_5" browsingtopics="true" style="left: 0px; position: absolute; top: 0px; border: 0px; width: 1090px; height: 0px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="1090" height="0" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting" src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/ads(4).html" data-google-container-id="a!6" data-google-query-id="CNbpvLjuvYIDFXnIFgUdf-sMZg" data-load-complete="true"></iframe></div></ins></div><nav class="pagenav mt-40">
+	<div class="column text-center mb-10">
+		
+		<a href="https://www.minwt.com/life/21945.html" class="pre_page">⇠ Fingerbot 智能開關器，一秒將家裡的電器變成智能設備</a>
+		
+	</div>
+	<div class="column text-center mb-100">
+		
+		<a href="https://www.minwt.com/free/21949.html" class="next_page">Sendsecure.io 透過瀏覽器，就能點對點傳送檔案，讓資料安全不外洩 ⇢</a>
+	
+	</div>
+</nav>
+	</div>
+</main>
+<div class="google-auto-placed" style="width: 100%; height: auto; clear: both; text-align: center;"><ins data-ad-format="auto" class="adsbygoogle adsbygoogle-noablate" data-ad-client="ca-pub-5358947323787843" data-adsbygoogle-status="done" style="display: block; margin: 10px auto; background-color: transparent; height: 0px;" data-ad-status="unfilled"><div id="aswift_6_host" style="border: none; height: 0px; width: 1200px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: hidden; opacity: 0;" tabindex="0" title="Advertisement" aria-label="Advertisement"><iframe id="aswift_6" name="aswift_6" browsingtopics="true" style="left: 0px; position: absolute; top: 0px; border: 0px; width: 1200px; height: 0px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="1200" height="0" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting" src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/ads(5).html" data-google-container-id="a!7" data-google-query-id="CIKHvbjuvYIDFTXSFgUd7AYCPg" data-load-complete="true"></iframe></div></ins></div><footer id="footer">
+  <div class="container">
+      Copyright © 2007-2023 梅問題教學網 
+  </div>
+</footer>
+<script type="text/javascript" src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/jquery-1.7.1.min.js.下載"></script>
+<script type="text/javascript" src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/jquery.highlight.min.js.下載"></script>
+<script type="text/javascript" src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/google_code_prettify.min.js.下載"></script>
+<script type="text/javascript" src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/mwt_script.min.js.下載"></script>
+ 
+<script defer="" src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/beacon.min.js.下載" data-cf-beacon="{&quot;token&quot;: &quot;3f4d44cc107a4ca581eb396d6363a200&quot;}"></script> 
+ 
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "b7w65zujn2");
+  </script>
+<script src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/jquery.cookie.min.js.下載"></script>
+<script src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/jquery.jqzoom.fix.min.js.下載"></script>
+<script src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/jquery-use-before-and-after.min.js.下載"></script>
+<script>
+$(function(){
+	
+	
+	$.cookie('close', 'n');
+	$(".jqzoom").jqueryzoom({
+		xzoom: 400,
+		yzoom: 300
+	});
+	$('.single-more-articles .close').click(function(){
+		$('.single-more-articles').removeClass('single-more-articles--visible');
+		$.cookie('close', 'y');
+	});
+	$(window).scroll(function () {
+		
+		
+		if($.cookie('close') == "n"){
+			var scrollVal = $(this).scrollTop();
+			if(scrollVal>=$('.single-content').height()*0.7){
+				$('.single-more-articles').addClass('single-more-articles--visible');
+			}
+			if(scrollVal<=$('.single-content').height()*0.7){
+				$('.single-more-articles').removeClass('single-more-articles--visible');
+			}
+		}
+	});
+	
+	
+	
+
+});
+
+
+</script>
+
+
+<ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;" data-ad-status="unfilled"><div id="aswift_0_host" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;" tabindex="0" title="Advertisement" aria-label="Advertisement"><iframe id="aswift_0" name="aswift_0" browsingtopics="true" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting" src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/ads(6).html" data-google-container-id="a!1" data-load-complete="true"></iframe></div></ins><div style="display:none;" class="jqPreload0">sdsdssdsd</div><link rel="stylesheet" href="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/superSelector.css">
+<script type="text/javascript" id="" src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/superSelector.js.下載"></script><script type="text/javascript" id="">var isOverGoogleAd=!1,gads;$("#gad1").mouseover(function(){isOverGoogleAd=!0;gads="\u5ee3\u5408\u7248\u4f4d-1"}).mouseout(function(){isOverGoogleAd=!1});$("#gad2").mouseover(function(){isOverGoogleAd=!0;gads="\u5ee3\u5408\u7248\u4f4d-2"}).mouseout(function(){isOverGoogleAd=!1});$("#gad3").mouseover(function(){isOverGoogleAd=!0;gads="\u5ee3\u5408\u7248\u4f4d-3"}).mouseout(function(){isOverGoogleAd=!1});
+$(window).blur(function(){isOverGoogleAd&&(window.dataLayer=window.dataLayer||[],dataLayer.push({event:"eventTracking",category:"\u5ee3\u544a\u76ee\u6a19",action:"\u6309\u9215\u9ede\u64ca",label:gads}))}).focus();</script><script type="text/javascript">
+    var _paq = _paq || [];
+    (function () {
+        var trackAnonymously = (function() { return window.sevenTag.getVariableValue('Piwik PRO Anonymization', 7) })()('analytics');
+        if (trackAnonymously) {
+            _paq.push(['setUserIsAnonymous', 1]);
+            _paq.push(['setVisitorCookieTimeout', 1800]);
+        }
+    }());
+</script>
+
+<script type="text/javascript">
+    var _paq = _paq || [];
+    _paq.push(['setTrackingSource', 'jstc_tm']);
+    _paq.push(['enableLinkTracking']);
+    _paq.push(['setIpTracking', true]);
+    _paq.push(['setDomains', ['minwt.com']]);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableJSErrorTracking']);
+    (function(p,i,w,ik) {
+        var g=ik.createElement('script'),s=ik.getElementsByTagName('script')[0];
+        _paq.push(['setTrackerUrl', p]);
+        _paq.push(['setSiteId', w]);
+        g.type='text/javascript';g.async=true;g.defer=true;g.src=i;s.parentNode.insertBefore(g,s);
+    })('https://minwt.piwik.pro/ppms.php','https://minwt.containers.piwik.pro/ppms.js','24611f67\u002D44c1\u002D4112\u002Dacc6\u002D1f9df6a5de51',document)
+</script>
+<script type="text/javascript">
+    var _paq = window._paq || [];
+    (function () {
+        var consents = undefined;
+        var consentType = 'analytics';
+        if (typeof consents !== 'undefined' &&
+            consents.hasOwnProperty('current_state') &&
+            consents.current_state.hasOwnProperty(consentType) &&
+            consents.current_state[consentType] === 1 &&
+            consents.hasOwnProperty('previous_state') &&
+            consents.previous_state.hasOwnProperty(consentType) &&
+            consents.previous_state[consentType] !== 1
+        ) {
+            _paq.push(['deanonymizeUser']);
+            _paq.push(['setVisitorCookieTimeout', 33955200]);
+        }
+    }());
+</script>
+        <script type="text/javascript">
+    var _paq = _paq || [];
+
+        _paq.push(['trackEvent', 'built-in page scroll', '25%']);
+</script>
+        <script type="text/javascript">
+    var _paq = _paq || [];
+
+        _paq.push(['trackEvent', 'built-in page scroll', '50%']);
+</script>
+        <script type="text/javascript">
+    var _paq = _paq || [];
+
+        _paq.push(['trackEvent', 'built-in page scroll', '75%']);
+</script>
+<div class="google-auto-placed" style="width: 100%; height: auto; clear: both; text-align: center;"><ins data-ad-format="auto" class="adsbygoogle adsbygoogle-noablate" data-ad-client="ca-pub-5358947323787843" data-adsbygoogle-status="done" style="display: block; margin: 10px auto; background-color: transparent; height: 280px;" data-ad-status="filled"><div id="aswift_7_host" style="border: none; height: 280px; width: 1200px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: visible;" tabindex="0" title="Advertisement" aria-label="Advertisement"><iframe id="aswift_7" name="aswift_7" browsingtopics="true" style="left:0;position:absolute;top:0;border:0;width:1200px;height:280px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="1200" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting" src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/ads(7).html" data-google-container-id="a!8" data-load-complete="true" data-google-query-id="CJ_V1LjuvYIDFUtglgodEfcH5Q"></iframe></div></ins></div><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" data-anchor-status="displayed" style="display: block; width: 100% !important; height: 129px !important; bottom: 0px; clear: none !important; float: none !important; left: 0px; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1; overflow: visible !important; padding: 0px !important; position: fixed; right: auto !important; top: auto !important; vertical-align: baseline !important; visibility: visible !important; z-index: 2147483647; background: rgb(250, 250, 250) !important;" data-ad-status="filled" data-anchor-shown="true"><div class="grippy-host"><template shadowrootmode="closed"><ins class="ee" style="inset: auto !important; clear: none !important; display: block !important; float: none !important; height: 5px !important; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; padding: 0px !important; position: relative !important; vertical-align: baseline !important; visibility: visible !important; width: auto !important; z-index: 1 !important; background-color: rgb(250, 250, 250) !important; box-shadow: rgba(0, 0, 0, 0.2) 0px -1px 5px -1px, rgba(0, 0, 0, 0.1) 0px 1px 2px -1px !important;"><span style="display: block !important; width: 80px !important; height: 45px !important; bottom: 0px !important; left: 0% !important; pointer-events: none !important;"><svg style="margin: 0px !important; position: absolute !important; bottom: 0px !important; left: 0% !important; display: block !important; width: 80px !important; height: 30px !important; transform: none !important; pointer-events: initial !important;"><defs><filter id="dropShadowTop" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><fecomponenttransfer in="SourceAlpha" result="TransferredAlpha"><fefuncr type="discrete" tableValues="0.5"></fefuncr><fefuncg type="discrete" tableValues="0.5"></fefuncg><fefuncb type="discrete" tableValues="0.5"></fefuncb></fecomponenttransfer><fegaussianblur in="TransferredAlpha" stdDeviation="2"></fegaussianblur><feoffset dx="0" dy="0" result="offsetblur"></feoffset><femerge><femergenode></femergenode><femergenode in="SourceGraphic"></femergenode></femerge></filter></defs><path d="M0,26 L0,6 A6,6 0 0,1 6,1 L50,1 A6,6 0 0,1 56,6 L56,20 A6,6 0 0,0 62,26 Z" stroke="#FAFAFA" stroke-width="1" fill="#FAFAFA" style="filter: url(&quot;#dropShadowTop&quot;);"></path><rect x="0" y="25" width="80" height="5" style="fill: rgb(250, 250, 250);"></rect><g class="down" stroke="#616161" stroke-width="2px" stroke-linecap="square"><line x1="22" y1="12" x2="28" y2="18"></line><line x1="28" y1="18" x2="34" y2="12"></line></g></svg></span></ins></template></div><div id="aswift_9_host" style="border: none !important; height: 124px !important; width: 100% !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: inline-block !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;" tabindex="0" title="Advertisement" aria-label="Advertisement"><iframe id="aswift_9" name="aswift_9" browsingtopics="true" style="width: 1005px !important; height: 124px !important; display: block; margin: 0px auto;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="1005" height="124" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting" src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/zrt_lookup_fy2021.html" data-google-container-id="a!a" data-google-query-id="CJSqk7juvYIDFZ_IFgUd4SwASg" data-load-complete="true"></iframe></div></ins><iframe src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/aframe.html" width="0" height="0" style="display: none;"></iframe><script type="text/javascript">
+    var _paq = _paq || [];
+    _paq.push(['setCustomUrl', 'https:\/\/www.minwt.com\/webdesign-dev\/js\/21947.html#google_vignette']);
+    _paq.push(['setDocumentTitle', '[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 | 梅問題．教學網']);
+            _paq.push(['trackPageView']);
+</script>
+<script type="text/javascript">
+    var _paq = _paq || [];
+    _paq.push(['setCustomUrl', 'https:\/\/www.minwt.com\/webdesign-dev\/js\/21947.html']);
+    _paq.push(['setDocumentTitle', '[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 | 梅問題．教學網']);
+            _paq.push(['trackPageView']);
+</script><iframe allow="join-ad-interest-group" data-tagging-id="G-F5DET7W8KF" data-load-time="1699772559890" height="0" width="0" style="display: none; visibility: hidden;" src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/rul.html"></iframe>
+</body><iframe id="google_esf" name="google_esf" src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/zrt_lookup_fy2021(1).html" style="display: none;"></iframe><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important; width: 100vw !important; height: 100vh !important; inset: 0px auto auto 0px !important; clear: none !important; float: none !important; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; padding: 0px !important; position: fixed !important; vertical-align: baseline !important; visibility: visible !important; z-index: 2147483647 !important; background: transparent !important;" aria-hidden="true" data-ad-status="filled" data-vignette-loaded="true" tabindex="0"><div id="aswift_8_host" style="border: none !important; height: 100vh !important; width: 100vw !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: inline-block !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;" tabindex="0" title="Advertisement" aria-label="Advertisement"><iframe id="aswift_8" name="aswift_8" browsingtopics="true" style="width: 100vw !important; height: 100vh !important; inset: 0px auto auto 0px !important; position: absolute !important; clear: none !important; display: inline !important; float: none !important; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; padding: 0px !important; vertical-align: baseline !important; visibility: visible !important; z-index: auto !important;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="" height="" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting" src="./[外掛] jQuery myCart 購物車模組，炫麗動畫與金額自動加總 _ 梅問題．教學網_files/zrt_lookup_fy2021(2).html" data-google-container-id="a!9" data-google-query-id="CJOqk7juvYIDFZ_IFgUd4SwASg" data-load-complete="true"></iframe></div></ins></html>
